@@ -250,6 +250,9 @@ mtime "python.install.time" "${start}"
 # shellcheck source=bin/steps/pipenv
 source "$BIN_DIR/steps/pipenv"
 
+# Install SWIG, this library is required to install M2Crypto
+source "$BIN_DIR/steps/swig-install"
+
 # If no requirements.txt file given, assume `setup.py develop` is intended.
 # This allows for people to ship a setup.py application to Heroku
 
